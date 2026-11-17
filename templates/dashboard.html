@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to your Secure Login Dashboard!</h1>
+    <p>You are successfully logged in.</p>
+
+    <form action="/logout" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ session.get('csrf_token', '') }}">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
+
+
+
